@@ -1,0 +1,13 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Concert de Jazz",
+      "date": "2024-01-15",
+      "price": 50,
+      "image": "",
+      "description": "Soirée jazz exceptionnelle"
+    }
+  ],
+  "orders": []
+}
