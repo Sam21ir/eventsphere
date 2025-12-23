@@ -3,10 +3,20 @@
     {
       "id": 1,
       "title": "Concert de Jazz",
-      "date": "2024-01-15",
+      "description": "Soirée jazz exceptionnelle avec des artistes internationaux",
+      "category": "Concert",
+      "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400",
       "price": 50,
-      "image": "",
-      "description": "Soirée jazz exceptionnelle"
+      "date": "2024-02-15"
+    },
+    {
+      "id": "9c24",
+      "title": "test1",
+      "description": "testtest",
+      "category": "Autre",
+      "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400",
+      "price": 100,
+      "date": "2025-12-04"
     }
   ],
   "orders": []

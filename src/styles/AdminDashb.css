@@ -1,0 +1,23 @@
+.EventAdd {
+    padding: 2rem;
+    background: #aee7f7;
+    border-radius: 8px;
+    text-align: center;
+    color: #282c34;
+}
+
+.EventManage {
+    padding: 2rem;
+    background: #f1ce9b;
+    border-radius: 8px;
+    text-align: center;
+    color: #282c34;
+}
+
+.CommandsManage {
+    padding: 2rem;
+    background: #96da99;
+    border-radius: 8px;
+    text-align: center;
+    color: #282c34;
+}
