@@ -5,6 +5,8 @@ import Cart from './pages/Cart';
 import './App.css';
 import AdminDashboard from './admin/AdminDashboard';
 import AddEvent from './admin/AddEvent';
+import AdminEvents from './admin/AdminEvents';
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/add-event" element={<AddEvent />} />
+        <Route path="/admin/events" element={<AdminEvents />} />
       </Routes>
     </Router>
   );

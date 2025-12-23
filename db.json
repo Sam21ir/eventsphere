@@ -10,13 +10,13 @@
       "date": "2024-02-15"
     },
     {
-      "id": "9c24",
-      "title": "test1",
-      "description": "testtest",
+      "title": "test 11 AA",
+      "description": "testest",
       "category": "Autre",
-      "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400",
-      "price": 100,
-      "date": "2025-12-04"
+      "image": "https://image.ma/img",
+      "price": 49,
+      "date": "2025-01-01",
+      "id": "ac72"
     }
   ],
   "orders": []

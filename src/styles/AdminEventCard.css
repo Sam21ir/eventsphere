@@ -1,0 +1,110 @@
+.admin-event-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.admin-event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.event-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-category {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(97, 218, 251, 0.9);
+  color: #282c34;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.event-content {
+  padding: 1rem;
+}
+
+.event-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #282c34;
+  font-size: 1.2rem;
+}
+
+.event-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.event-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.event-date {
+  color: #666;
+}
+
+.event-price {
+  color: #61dafb;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.event-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+}
+
+.event-actions button {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-edit {
+  background: #d7ab68;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #c87f27;
+}
+
+.btn-delete {
+  background: #da807e;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #e53935;
+}
