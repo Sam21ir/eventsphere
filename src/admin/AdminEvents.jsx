@@ -4,6 +4,8 @@ import AdminEventCard from './AdminEventCard';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/AdminEvents.css';
+import ImageUpload from '../components/ImageUpload';
+
 
 const AdminEvents = () => {
   const [events, setEvents] = useState([]);
@@ -175,12 +177,9 @@ const AdminEvents = () => {
 
               <div className="form-group">
                 <label htmlFor="image">URL de l'image</label>
-                <input
-                  type="url"
-                  id="image"
-                  name="image"
-                  value={formData.image}
-                  onChange={handleChange}
+                <ImageUpload 
+                  onImageUploaded={(url) => setFormData({...formData, image: url})}
+                  currentImage={formData.image}
                 />
               </div>
 

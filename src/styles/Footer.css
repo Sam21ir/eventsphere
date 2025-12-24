@@ -1,9 +1,50 @@
 .footer {
-    padding: 20px;
+    padding: 1rem 2rem;
     text-align: center;
+    align-items: center;
     background: #282c34;
     color: #fff;
-    position: fixed;
+    display: flex;
     bottom: 0;
     width: 100%;
+}
+
+.footer_bottom {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLangCurrency {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footerLang {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footerLang select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.footerCurrency {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footerCurrency select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
 }

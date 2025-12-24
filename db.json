@@ -1,22 +1,13 @@
 {
   "events": [
     {
-      "id": 1,
-      "title": "Concert de Jazz",
-      "description": "Soirée jazz exceptionnelle avec des artistes internationaux",
-      "category": "Concert",
-      "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400",
-      "price": 50,
-      "date": "2024-02-15"
-    },
-    {
-      "title": "test 11 AA",
+      "title": "test",
       "description": "testest",
       "category": "Autre",
-      "image": "https://image.ma/img",
-      "price": 49,
-      "date": "2025-01-01",
-      "id": "ac72"
+      "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1766573636/eventsphere/htms3ztne7xuqwcguczp.jpg",
+      "price": 1,
+      "date": "2026-01-01",
+      "id": "368b"
     }
   ],
   "orders": []
