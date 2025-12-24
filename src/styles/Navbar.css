@@ -31,3 +31,35 @@
 .navbar-menu li a:hover {
   color: #61dafb;
 }
+
+/* Styles existants... */
+
+.cart-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-btn:hover {
+  background: rgba(97, 218, 251, 0.1);
+}
+
+.cart-badge {
+  background: #ef5350;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  min-width: 20px;
+  text-align: center;
+}

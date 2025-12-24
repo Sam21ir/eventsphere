@@ -1,0 +1,141 @@
+.cart-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  align-items: center;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cart-item-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #282c34;
+  margin: 0;
+}
+
+.cart-item-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.cart-item-price {
+  font-size: 0.9rem;
+  color: #61dafb;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cart-item-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 0.25rem;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #61dafb;
+  color: #282c34;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover:not(:disabled) {
+  background: #4fa8c5;
+  transform: scale(1.1);
+}
+
+.qty-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.quantity {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: #282c34;
+}
+
+.remove-btn {
+  background: #ef5350;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.remove-btn:hover {
+  background: #e53935;
+  transform: scale(1.05);
+}
+
+.cart-item-subtotal {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #282c34;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 60px 1fr;
+    gap: 0.75rem;
+  }
+
+  .cart-item-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-item-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cart-item-subtotal {
+    grid-column: 1 / -1;
+    text-align: left;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+  }
+}

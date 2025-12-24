@@ -6,11 +6,13 @@ import './App.css';
 import AdminDashboard from './admin/AdminDashboard';
 import AddEvent from './admin/AddEvent';
 import AdminEvents from './admin/AdminEvents';
+import CartSidebar from './components/CartSidebar';
 
 
 function App() {
   return (
     <Router>
+      <CartSidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />

@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleCart } from '../store/cartSlice';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
-  const cartItems = useSelector((state) => state.cart.items);
+  const { items } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
+
+  const handleCartClick = () => {
+    dispatch(toggleCart());
+  };
 
   return (
     <nav className="navbar">
@@ -13,7 +21,14 @@ const Navbar = () => {
       </div>
       <ul className="navbar-menu">
         <li><Link to="/">Accueil</Link></li>
-        <li><Link to="/cart">Panier ({cartItems.length})</Link></li>
+        <li>
+          <button className="cart-btn" onClick={handleCartClick}>
+            🛒 Panier
+            {totalItems > 0 && (
+              <span className="cart-badge">{totalItems}</span>
+            )}
+          </button>
+        </li>
         <li><Link to="/admin">Admin</Link></li>
       </ul>
     </nav>
