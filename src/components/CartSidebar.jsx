@@ -1,12 +1,23 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { closeCart, clearCart } from '../store/cartSlice';
+import { 
+  closeCart, 
+  clearCart,
+  selectCartItems,
+  selectCartTotal,
+  selectIsCartOpen,
+  selectCartItemCount
+} from '../store/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 import '../styles/CartSidebar.css';
 
 const CartSidebar = () => {
-  const { items, total, isOpen } = useSelector((state) => state.cart);
+  const items = useSelector(selectCartItems);
+  const total = useSelector(selectCartTotal);
+  const isOpen = useSelector(selectIsCartOpen);
+  const itemCount = useSelector(selectCartItemCount);
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -38,7 +49,7 @@ const CartSidebar = () => {
         {/* Header */}
         <div className="cart-header">
           <h2>Mon Panier 🛒</h2>
-          <button className="close-btn" onClick={handleClose}>
+          <button className="close-btn" onClick={handleClose} title="Fermer">
             ✕
           </button>
         </div>
@@ -77,9 +88,11 @@ const CartSidebar = () => {
             <div className="cart-summary">
               <div className="summary-row">
                 <span>Nombre d'articles</span>
-                <span className="summary-value">
-                  {items.reduce((sum, item) => sum + item.quantity, 0)}
-                </span>
+                <span className="summary-value">{itemCount}</span>
+              </div>
+              <div className="summary-row">
+                <span>Sous-total</span>
+                <span className="summary-value">{total.toFixed(2)} €</span>
               </div>
               <div className="summary-row total">
                 <span>Total</span>

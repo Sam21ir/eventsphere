@@ -8,6 +8,33 @@
       "price": 1,
       "date": "2026-01-01",
       "id": "368b"
+    },
+    {
+      "id": "defa",
+      "title": "aaaa",
+      "description": "aabbb",
+      "category": "Concert",
+      "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1766653385/eventsphere/aq1ut0eudmbqfgdguwva.jpg",
+      "price": 12,
+      "date": "2025-01-01"
+    },
+    {
+      "id": "54ac",
+      "title": "testtt",
+      "description": "ttttttttt",
+      "category": "Concert",
+      "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1766654153/eventsphere/hqufi2ri3opmy2twnweu.jpg",
+      "price": 13,
+      "date": "2026-01-01"
+    },
+    {
+      "id": "4903",
+      "title": "tuykjhryuk",
+      "description": "rytukertyuk",
+      "category": "Concert",
+      "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1766662728/eventsphere/vgvupn353d6jtga22jed.png",
+      "price": 0.35,
+      "date": "2025-01-01"
     }
   ],
   "orders": []

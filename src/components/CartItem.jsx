@@ -1,19 +1,17 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeFromCart, updateQuantity } from '../store/cartSlice';
+import { removeFromCart, incrementQuantity, decrementQuantity } from '../store/cartSlice';
 import '../styles/CartItem.css';
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
 
   const handleIncrease = () => {
-    dispatch(updateQuantity({ id: item.id, quantity: item.quantity + 1 }));
+    dispatch(incrementQuantity(item.id));
   };
 
   const handleDecrease = () => {
-    if (item.quantity > 1) {
-      dispatch(updateQuantity({ id: item.id, quantity: item.quantity - 1 }));
-    }
+    dispatch(decrementQuantity(item.id));
   };
 
   const handleRemove = () => {
@@ -42,16 +40,26 @@ const CartItem = ({ item }) => {
             className="qty-btn" 
             onClick={handleDecrease}
             disabled={item.quantity <= 1}
+            title="Diminuer"
           >
             −
           </button>
           <span className="quantity">{item.quantity}</span>
-          <button className="qty-btn" onClick={handleIncrease}>
+          <button 
+            className="qty-btn" 
+            onClick={handleIncrease}
+            disabled={item.quantity >= 10}
+            title="Augmenter (max 10)"
+          >
             +
           </button>
         </div>
         
-        <button className="remove-btn" onClick={handleRemove}>
+        <button 
+          className="remove-btn" 
+          onClick={handleRemove}
+          title="Supprimer"
+        >
           🗑️
         </button>
       </div>

@@ -1,12 +1,11 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import '../styles/Home.css';
 import React, { useState, useEffect } from 'react';
 import { getAllEvents } from '../services/eventService';
 import EventCard from '../components/EventCard';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import '../styles/Home.css';
 
 const Home = () => {
-
   const [events, setEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -27,6 +26,7 @@ const Home = () => {
     try {
       setLoading(true);
       const data = await getAllEvents();
+      console.log('Événements chargés:', data); // Debug
       setEvents(data);
       setFilteredEvents(data);
     } catch (error) {
@@ -39,12 +39,10 @@ const Home = () => {
   const filterEvents = () => {
     let filtered = events;
 
-    // Filtre par catégorie
     if (selectedCategory !== 'Tous') {
       filtered = filtered.filter(event => event.category === selectedCategory);
     }
 
-    // Filtre par recherche
     if (searchTerm) {
       filtered = filtered.filter(event =>
         event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -52,38 +50,32 @@ const Home = () => {
       );
     }
 
+    console.log('Événements filtrés:', filtered); // Debug
     setFilteredEvents(filtered);
-  };
-
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-  };
-
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
   };
 
   return (
     <div>
       <Navbar />
+      
       <main className="home-container">
-        <section className="home-section">
+        <section className="hero">
           <h1>Bienvenue sur EventSphere</h1>
           <p>Découvrez nos événements</p>
         </section>
 
-        <section className='search-section'>
-          <div className='search-bar'>
-          <input
-            type="text"
-            placeholder="Rechercher des événements..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-            className="search-input"
-          />
+        <section className="search-section">
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="🔍 Rechercher des événements..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
           </div>
         </section>
-        {/* Filtres par catégorie */}
+
         <section className="filters-section">
           <h2>Catégories</h2>
           <div className="category-filters">
@@ -91,7 +83,7 @@ const Home = () => {
               <button
                 key={category}
                 className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
-                onClick={() => handleCategoryChange(category)}
+                onClick={() => setSelectedCategory(category)}
               >
                 {category}
               </button>
@@ -99,12 +91,10 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Compteur de résultats */}
         <div className="results-count">
           {filteredEvents.length} événement{filteredEvents.length > 1 ? 's' : ''} trouvé{filteredEvents.length > 1 ? 's' : ''}
         </div>
 
-        {/* Liste des événements */}
         <section className="events-section">
           {loading ? (
             <div className="loading-spinner">
@@ -125,6 +115,7 @@ const Home = () => {
           )}
         </section>
       </main>
+
       <Footer />
     </div>
   );
