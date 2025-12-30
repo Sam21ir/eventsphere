@@ -4,7 +4,7 @@
   gap: 1rem;
   padding: 1rem;
   background: white;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   align-items: center;
@@ -14,7 +14,7 @@
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .cart-item-details {
@@ -38,7 +38,7 @@
 
 .cart-item-price {
   font-size: 0.9rem;
-  color: #61dafb;
+  color: #282c34;
   font-weight: 600;
   margin: 0;
 }
@@ -55,7 +55,7 @@
   align-items: center;
   gap: 0.5rem;
   background: #f8f9fa;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 0.25rem;
 }
 
@@ -63,9 +63,9 @@
   width: 28px;
   height: 28px;
   border: none;
-  background: #61dafb;
+  background: #8fa2a7;
   color: #282c34;
-  border-radius: 50%;
+  border-radius: 5%;
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
@@ -76,7 +76,7 @@
 }
 
 .qty-btn:hover:not(:disabled) {
-  background: #4fa8c5;
+  background: #17282e4e;
   transform: scale(1.1);
 }
 
@@ -93,13 +93,13 @@
 }
 
 .remove-btn {
-  background: #ef5350;
+  background: #ca605e;
   color: white;
   border: none;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 12px;
   transition: all 0.2s;
 }
 

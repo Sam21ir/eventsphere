@@ -1,6 +1,6 @@
 .event-card {
   background: white;
-  border-radius: 12px;
+  border-radius: 5px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -35,12 +35,12 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(97, 218, 251, 0.95);
+  background: rgba(97, 218, 251, 0.508);
   color: #282c34;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.90rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -83,7 +83,7 @@
 }
 
 .event-card-price {
-  color: #61dafb;
+  color: #282c34;
   font-weight: 800;
   font-size: 1.4rem;
 }
@@ -110,6 +110,7 @@
   background: white;
   color: #282c34;
   border: 2px solid #61dafb;
+  border-radius: 5px;
 }
 
 .btn-details:hover {
@@ -125,4 +126,60 @@
 .btn-add-cart:hover {
   background: #4fa8c5;
   transform: scale(1.02);
+}
+
+/* Badge "dans le panier" */
+.in-cart-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #41b08bc7;
+  color: white;
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Bouton "Ajouter" avec état */
+.btn-add-cart.adding {
+  background: #ffa82669;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.btn-add-cart.in-cart {
+  background: #41b08bd9;
+  color: white;
+}
+
+.btn-add-cart.in-cart:hover {
+  background: #41b08bd9;
+}
+
+/* Animation sur le bouton */
+@keyframes buttonPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-add-cart:active {
+  animation: buttonPop 0.3s ease;
 }

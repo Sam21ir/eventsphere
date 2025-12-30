@@ -112,7 +112,7 @@
   background: #61dafb;
   color: #282c34;
   border: none;
-  border-radius: 6px;
+  border-radius: 3px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
@@ -132,18 +132,35 @@
   width: 100%;
   padding: 0.75rem;
   background: white;
-  color: #ef5350;
-  border: 2px solid #ef5350;
-  border-radius: 6px;
+  color: #ff0400;
+  border: 2px solid #282c34;
+  border-radius: 3px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 1rem;
 }
+/* ef5350 */
 
 .clear-cart-btn:hover {
-  background: #ef5350;
+  background: #ff0400;
   color: white;
+}
+
+/* le résumé */
+.summary-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ddd, transparent);
+  margin: 0.5rem 0;
+}
+
+/* paiement sécurisé */
+.secure-payment {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 /* Footer */
@@ -181,17 +198,17 @@
 }
 
 .summary-row.total .summary-value {
-  color: #61dafb;
+  color: #282c34;
   font-size: 1.5rem;
 }
 
 .checkout-btn {
   width: 100%;
   padding: 1.2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #282c34;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;

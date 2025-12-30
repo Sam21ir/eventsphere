@@ -21,6 +21,13 @@ const CartSidebar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  // tax
+
+  const subtotal = total;
+  const taxRate = 0.20;
+  const taxes = subtotal * taxRate;
+  const totalWithTaxes = subtotal + taxes;
+
   const handleClose = () => {
     dispatch(closeCart());
   };
@@ -31,7 +38,7 @@ const CartSidebar = () => {
   };
 
   const handleClearCart = () => {
-    if (window.confirm('Voulez-vous vraiment vider le panier ?')) {
+    if (window.confirm(`Voulez-vous vraiment vider le panier (${itemCount} article${itemCount > 1 ? 's' : ''}) ?`)) {
       dispatch(clearCart());
     }
   };
@@ -48,7 +55,7 @@ const CartSidebar = () => {
       <div className={`cart-sidebar ${isOpen ? 'open' : ''}`}>
         {/* Header */}
         <div className="cart-header">
-          <h2>Mon Panier 🛒</h2>
+          <h2>Mon Panier</h2>
           <button className="close-btn" onClick={handleClose} title="Fermer">
             ✕
           </button>
@@ -76,7 +83,7 @@ const CartSidebar = () => {
 
               {/* Bouton vider le panier */}
               <button className="clear-cart-btn" onClick={handleClearCart}>
-                🗑️ Vider le panier
+                Vider le panier ({itemCount} article{itemCount > 1 ? 's' : ''})
               </button>
             </>
           )}
@@ -92,17 +99,25 @@ const CartSidebar = () => {
               </div>
               <div className="summary-row">
                 <span>Sous-total</span>
-                <span className="summary-value">{total.toFixed(2)} €</span>
+                <span className="summary-value">{subtotal.toFixed(2)} €</span>
               </div>
+              <div className="summary-row">
+                <span>TVA (20%)</span>
+                <span className="summary-value">{taxes.toFixed(2)} €</span>
+              </div>
+              <div className="summary-divider"></div>
               <div className="summary-row total">
-                <span>Total</span>
-                <span className="summary-value">{total.toFixed(2)} €</span>
+                <span>Total TTC</span>
+                <span className="summary-value">{totalWithTaxes.toFixed(2)} €</span>
               </div>
             </div>
-            
+          
             <button className="checkout-btn" onClick={handleCheckout}>
-              Passer la commande 💳
+              Passer la commande
             </button>
+            <p className="secure-payment">
+              Paiement 100% sécurisé
+            </p>
           </div>
         )}
       </div>

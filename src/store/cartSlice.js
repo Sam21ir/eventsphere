@@ -152,3 +152,6 @@ export const selectIsCartOpen = (state) => state.cart.isOpen;
 
 // Export du reducer
 export default cartSlice.reducer;
+
+export const selectItemInCart = (eventId) => (state) => 
+  state.cart.items.find(item => item.id === eventId);
