@@ -1,23 +1,45 @@
 .EventAdd {
     padding: 2rem;
-    background: #aee7f7;
+    background: linear-gradient(180deg, #282c34, silver);
     border-radius: 8px;
     text-align: center;
-    color: #282c34;
+    color: #9BF6FF;
+    border-style: double;
+}
+
+/* .EventAdd h2 {
+    font-size:;
+} */
+
+.EventAdd h2:hover {
+    color: #e6faff;
+    cursor: pointer;
 }
 
 .EventManage {
     padding: 2rem;
-    background: #f1ce9b;
+    background: linear-gradient(180deg, #282c34, silver);
     border-radius: 8px;
     text-align: center;
-    color: #282c34;
+    color: #9BF6FF;
+    border-style: double;
+}
+
+.EventManage h2:hover {
+    color: #e6faff;
+    cursor: pointer;
 }
 
 .CommandsManage {
     padding: 2rem;
-    background: #96da99;
+    background: linear-gradient(180deg, #282c34, silver);
     border-radius: 8px;
     text-align: center;
-    color: #282c34;
+    color: #9BF6FF;
+    border-style: double;
+}
+
+.CommandsManage h2:hover {
+    color: #e6faff;
+    cursor: pointer;
 }

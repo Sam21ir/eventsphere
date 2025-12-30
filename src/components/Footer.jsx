@@ -1,12 +1,31 @@
-import React from 'react';
 import '../styles/Footer.css';
+import React, { useEffect, useState } from "react";
+
 
 
   const getCurrentYear = () => new Date().getFullYear();
 
 const Footer = () => {
+
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.innerHeight + window.scrollY;
+      const pageHeight = document.documentElement.scrollHeight;
+      if (scrollPosition >= pageHeight - 100) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <footer className="footer"> 
+    <footer className={`footer ${show ? 'show' : ''}`}>
         <div className="footer_bottom">
           <p>
             © {getCurrentYear()} Perfumes. All Rights Reserved.
