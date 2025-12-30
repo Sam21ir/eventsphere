@@ -60,7 +60,7 @@ const CartItem = ({ item }) => {
             title={item.quantity === 1 ? "Supprimer l'article" : "Diminuer"}
             aria-label="Diminuer la quantité"
           >
-            {item.quantity === 1 ? 'Supprimer' : '−'}
+            {item.quantity === 1 ? '−' : '−'}
           </button>
           <span className="quantity" aria-label={`Quantité: ${item.quantity}`}>{item.quantity}</span>
           <button 
