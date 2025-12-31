@@ -3,47 +3,58 @@
     min-height: calc(100vh - 122px);
 }
 
-.EventAdd {
+.admin-dashboard-container button {            
+    padding: 0.75rem 1.5rem;
+    background: #282c34;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: Englebert;
+}
+.admin-dashboard-container button:hover {
+    background: #cf5555;
+}
+
+@property --stop-pos {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 90%; 
+}
+.EventAdd, .EventManage, .CommandsManage {
     padding: 2rem;
-    background: linear-gradient(180deg, #282c34, silver);
+    background: linear-gradient(180deg, #282c34 var(--stop-pos), silver);
     border-radius: 8px;
     text-align: center;
     color: #9BF6FF;
     border-style: double;
+    transition: --stop-pos 1.5s ease-in-out, transform 0.5s ease-in-out;
 }
-
-/* .EventAdd h2 {
-    font-size:;
-} */
+.EventAdd:hover {
+    --stop-pos: 65%;
+    cursor: pointer;
+    transform: scale(1.05);
+}
 
 .EventAdd h2:hover {
     color: #e6faff;
     cursor: pointer;
 }
-
-.EventManage {
-    padding: 2rem;
-    background: linear-gradient(180deg, #282c34, silver);
-    border-radius: 8px;
-    text-align: center;
-    color: #9BF6FF;
-    border-style: double;
+.EventManage:hover {
+    --stop-pos: 70%;
+    cursor: pointer;
+    transform: scale(1.05);
 }
-
 .EventManage h2:hover {
     color: #e6faff;
     cursor: pointer;
 }
-
-.CommandsManage {
-    padding: 2rem;
-    background: linear-gradient(180deg, #282c34, silver);
-    border-radius: 8px;
-    text-align: center;
-    color: #9BF6FF;
-    border-style: double;
+.CommandsManage:hover {
+    --stop-pos: 75%;
+    cursor: pointer;
+    transform: scale(1.05);
 }
-
 .CommandsManage h2:hover {
     color: #e6faff;
     cursor: pointer;

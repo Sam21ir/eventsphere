@@ -39,7 +39,7 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   transition: all 0.3s;
-  font-family: 'Englebert'; /* font family ici */
+  font-family: 'Englebert';
 }
 
 .search-input:focus {
@@ -75,7 +75,7 @@
   cursor: pointer;
   transition: all 0.3s;
   font-size: 0.95rem;
-  font-family: 'Englebert'; /* font family ici */
+  font-family: 'Englebert'; 
 }
 
 .filter-btn:hover {
