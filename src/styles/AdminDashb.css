@@ -1,3 +1,8 @@
+.admin-dashboard-container {
+    padding: 2rem;
+    min-height: calc(100vh - 122px);
+}
+
 .EventAdd {
     padding: 2rem;
     background: linear-gradient(180deg, #282c34, silver);

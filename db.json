@@ -1,14 +1,51 @@
 {
   "events": [
     {
-      "id": "a2fd",
       "title": "a",
       "description": "aa",
       "category": "Concert",
       "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767097901/eventsphere/nxem7fxhi2osbqaderud.jpg",
       "price": 123,
-      "date": "2026-01-01"
+      "date": "2026-01-01",
+      "id": "a2fd"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": "abcb",
+      "customerName": "a",
+      "customerEmail": "a@a.a",
+      "customerPhone": "0630002010",
+      "items": [
+        {
+          "id": "a2fd",
+          "title": "a",
+          "price": 123,
+          "quantity": 2,
+          "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767097901/eventsphere/nxem7fxhi2osbqaderud.jpg"
+        }
+      ],
+      "total": 246,
+      "status": "En attente",
+      "createdAt": "2025-12-31T14:05:28.312Z"
+    },
+    {
+      "id": "a2ab",
+      "customerName": "SAMIR EL ALAMI",
+      "customerEmail": "elalamisamirr@gmail.com",
+      "customerPhone": "0630002010",
+      "items": [
+        {
+          "id": "a2fd",
+          "title": "a",
+          "price": 123,
+          "quantity": 1,
+          "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767097901/eventsphere/nxem7fxhi2osbqaderud.jpg"
+        }
+      ],
+      "total": 123,
+      "status": "En attente",
+      "createdAt": "2025-12-31T14:15:59.461Z"
+    }
+  ]
 }

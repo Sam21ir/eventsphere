@@ -10,6 +10,9 @@ import CartSidebar from './components/CartSidebar';
 import './App.css';
 import CartTest from './pages/CartTest';
 
+import Checkout from './pages/Checkout';
+import OrderConfirmation from './pages/OrderConfirmation';
+
 
 function App() {
   return (
@@ -27,6 +30,8 @@ function App() {
         <Route path="/admin/add-event" element={<AddEvent />} />
         <Route path="/admin/events" element={<AdminEvents />} />
         <Route path="/cart-test" element={<CartTest />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order-confirmation" element={<OrderConfirmation />} />
       </Routes>
     </Router>
   );

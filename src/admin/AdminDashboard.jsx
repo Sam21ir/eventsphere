@@ -8,7 +8,7 @@ const AdminDashboard = () => {
   return (
     <div>
       <Navbar />
-      <main style={{ padding: '2rem', minHeight: '60vh' }}>
+      <main className="admin-dashboard-container">
         <h1>Tableau de bord Admin</h1>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
           <Link to="/admin/add-event" style={{ textDecoration: 'none' }}>

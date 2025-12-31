@@ -26,10 +26,10 @@ const AdminEventCard = ({ event, onEdit, onDelete }) => {
       </div>
 
       <div className="event-actions">
-        <button className="btn-edit" onClick={() => onEdit(event)}>
+        <button className="btn-edit" onClick={() => onEdit(event)} style={{ fontFamily: 'Englebert, sans-serif' }}>
             Modifier
         </button>
-        <button className="btn-delete" onClick={() => onDelete(event.id)}>
+        <button className="btn-delete" onClick={() => onDelete(event.id)} style={{ fontFamily: 'Englebert, sans-serif' }}>
             Supprimer
         </button>
       </div>

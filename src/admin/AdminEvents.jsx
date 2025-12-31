@@ -212,11 +212,11 @@ const AdminEvents = () => {
               </div>
 
               <div className="form-actions">
-                <button type="submit" className="btn-save">
-                  💾 Enregistrer
+                <button type="submit" className="btn-save" style={{ fontFamily: 'Englebert, sans-serif' }}>
+                  Enregistrer
                 </button>
-                <button type="button" className="btn-cancel" onClick={handleCancelEdit}>
-                  ❌ Annuler
+                <button type="button" className="btn-cancel" onClick={handleCancelEdit} style={{ fontFamily: 'Englebert, sans-serif' }}>
+                  Annuler
                 </button>
               </div>
             </form>

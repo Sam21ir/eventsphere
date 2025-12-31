@@ -1,0 +1,133 @@
+.confirmation-container {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #282c34 0%, #61dafb 100%);
+}
+
+.confirmation-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: bounceIn 0.6s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.confirmation-card h1 {
+  color: #282c34;
+  margin-bottom: 1rem;
+}
+
+.confirmation-message {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.order-details {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.order-details h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #282c34;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.total-amount {
+  color: #61dafb;
+  font-size: 1.3rem;
+}
+
+.status-badge {
+  background: #dda859;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.order-items-summary {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.order-items-summary h3 {
+  margin-bottom: 1rem;
+  color: #282c34;
+}
+
+.confirmation-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: #666;
+}
+
+.confirmation-actions {
+  margin: 2rem 0;
+}
+
+.btn-home {
+  padding: 1rem 2.5rem;
+  background: #282c34;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.email-note {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+}
