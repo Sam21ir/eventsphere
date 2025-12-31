@@ -6,6 +6,8 @@ import { createOrder } from '../services/orderService';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Checkout.css';
+import { sendOrderToN8n } from '../services/n8nService';
+
 
 const Checkout = () => {
   const items = useSelector(selectCartItems);
@@ -105,6 +107,13 @@ const Checkout = () => {
 
       const order = await createOrder(orderData);
 
+        try {
+          await sendOrderToN8n(order);
+          console.log('✅ Email envoyé via n8n');
+        } catch (error) {
+          console.error('⚠️ Erreur email n8n (commande enregistrée quand même)');
+        }
+        
       dispatch(clearCart());
 
       navigate('/order-confirmation', { state: { order } });
