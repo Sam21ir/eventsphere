@@ -101,6 +101,7 @@
   cursor: pointer;
   font-size: 12px;
   transition: all 0.2s;
+  font-family: 'Englebert'; /* font family ici */
 }
 
 .remove-btn:hover {

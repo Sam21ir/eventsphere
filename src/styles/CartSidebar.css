@@ -116,6 +116,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
+  font-family: 'Englebert';
 }
 
 .continue-shopping-btn:hover {
@@ -213,6 +214,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
+  font-family: 'Englebert';
 }
 
 .checkout-btn:hover {

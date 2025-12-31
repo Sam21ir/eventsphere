@@ -82,7 +82,7 @@ const CartSidebar = () => {
               </div>
 
               {/* Bouton vider le panier */}
-              <button className="clear-cart-btn" onClick={handleClearCart}>
+              <button className="clear-cart-btn" onClick={handleClearCart} style={{ fontFamily: 'Englebert' }}>
                 Vider le panier ({itemCount} article{itemCount > 1 ? 's' : ''})
               </button>
             </>
