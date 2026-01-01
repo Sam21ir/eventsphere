@@ -8,22 +8,32 @@ const Navbar = () => {
   const totalItems = useSelector(selectCartItemCount);
   const dispatch = useDispatch();
   const [animate, setAnimate] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Animation quand le compteur change
-  useEffect(() => {
-    if (totalItems > 0) {
-      setAnimate(true);
-      const timer = setTimeout(() => setAnimate(false), 500);
-      return () => clearTimeout(timer);
-    }
-  }, [totalItems]);
 
-  const handleCartClick = () => {
-    dispatch(toggleCart());
-  };
+    useEffect(() => {
+      if (totalItems > 0) {
+        setAnimate(true);
+        const timer = setTimeout(() => setAnimate(false), 500);
+        return () => clearTimeout(timer);
+      }
+    }, [totalItems]);
+
+    useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+    const handleCartClick = () => {
+      dispatch(toggleCart());
+    };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-brand">
         <Link to="/">EventSphere</Link>
       </div>

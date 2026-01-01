@@ -46,6 +46,24 @@
       "total": 123,
       "status": "En attente",
       "createdAt": "2025-12-31T14:15:59.461Z"
+    },
+    {
+      "id": "848b",
+      "customerName": "samir el alami",
+      "customerEmail": "elalamicentsept@gmail.com",
+      "customerPhone": "0606500608",
+      "items": [
+        {
+          "id": "a2fd",
+          "title": "a",
+          "price": 123,
+          "quantity": 1,
+          "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767097901/eventsphere/nxem7fxhi2osbqaderud.jpg"
+        }
+      ],
+      "total": 123,
+      "status": "En attente",
+      "createdAt": "2025-12-31T19:56:48.485Z"
     }
   ]
 }
