@@ -8,6 +8,15 @@
       "price": 123,
       "date": "2026-01-01",
       "id": "a2fd"
+    },
+    {
+      "id": "1d8b",
+      "title": "cka",
+      "description": "cka event",
+      "category": "Autre",
+      "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767316330/eventsphere/koyoiojgi21luyaxsq7q.jpg",
+      "price": 445.02,
+      "date": "2026-01-01"
     }
   ],
   "orders": [
