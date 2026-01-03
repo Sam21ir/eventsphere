@@ -325,3 +325,158 @@ Email Client
 ---
 
 ## 🚀 Déploiement
+
+### Configuration GitHub Pages avec sous-domaine personnalisé
+
+L'application est déployée sur **GitHub Pages** avec un sous-domaine personnalisé.
+
+**URL de production :** [https://eventsphere.samirelalami.space](https://eventsphere.samirelalami.space)
+
+---
+
+### Étapes de déploiement
+
+#### 1. Configuration du projet pour GitHub Pages
+
+**Installation de gh-pages :**
+```bash
+npm install --save-dev gh-pages
+```
+
+**Ajout des scripts dans `package.json` :**
+```json
+{
+  "homepage": "https://eventsphere.samirelalami.space",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
+```
+
+---
+
+#### 2. Utilisation de HashRouter (pour éviter les erreurs 404)
+
+**Pourquoi HashRouter ?**
+
+GitHub Pages ne supporte pas le routing côté client de React Router. Sans HashRouter, un rafraîchissement de page (F5) sur `/checkout` renvoie une **erreur 404**.
+
+**Solution implémentée :**
+
+Dans `src/App.jsx`, nous utilisons `HashRouter` au lieu de `BrowserRouter` :
+```javascript
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+// Au lieu de : import { BrowserRouter as Router, Routes, Route }
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* ... vos routes */}
+      </Routes>
+    </Router>
+  );
+}
+```
+
+**Résultat :**
+- URLs avec `#` : `https://eventsphere.samirelalami.space/#/checkout`
+- ✅ Pas d'erreur 404 lors du refresh
+- ✅ Navigation fluide entre les pages
+- ✅ Fonctionne parfaitement sur GitHub Pages
+
+---
+
+#### 3. Configuration du sous-domaine personnalisé
+
+**Étape A : Configuration DNS**
+
+Type : CNAME
+Nom : eventsphere
+Cible : sam21ir.github.io
+TTL : Auto
+```
+
+**Étape B : Configuration GitHub**
+
+1. Allez sur votre repo GitHub → **Settings** → **Pages**
+2. Dans **Custom domain**, entrez : `eventsphere.samirelalami.space`
+3. Cochez **Enforce HTTPS**
+4. GitHub vérifie le DNS (peut prendre quelques minutes)
+
+**Étape C : Fichier CNAME**
+
+Créez un fichier `public/CNAME` (sans extension) avec :
+```
+eventsphere.samirelalami.space
+```
+
+Ce fichier sera copié dans le build et empêche GitHub de supprimer le domaine personnalisé à chaque déploiement.
+
+---
+
+#### 4. Déploiement
+
+**Commande de déploiement :**
+```bash
+npm run deploy
+```
+
+Cette commande :
+1. Build le projet (`npm run build`)
+2. Pousse le dossier `/build` vers la branche `gh-pages`
+3. GitHub Pages détecte le changement et met à jour le site
+
+**Délai de mise en ligne :** 1-3 minutes
+
+---
+
+### Structure après déploiement
+```
+Branches GitHub :
+├── main          # Code source React
+└── gh-pages      # Build déployé (généré automatiquement)
+
+Fichiers importants :
+├── public/CNAME  # Configuration domaine personnalisé
+├── package.json  # Scripts de déploiement
+└── src/App.jsx   # HashRouter configuré
+```
+
+---
+
+### ⚠️ Limitations GitHub Pages
+
+- **Pas de backend** : JSON Server ne fonctionne pas sur GitHub Pages
+  - **Solution** : Utilisez une API hébergée séparément (Render, Railway, Heroku)
+
+- **Variables d'environnement** : Les `.env` ne sont pas sécurisés en production
+  - **Solution** : Utilisez les secrets GitHub Actions ou un backend pour les clés sensibles
+
+---
+
+### 🔄 Workflow de mise à jour
+```bash
+# 1. Développer en local
+npm start
+
+# 2. Tester les changements
+npm run build
+
+# 3. Déployer
+npm run deploy
+
+# 4. Vérifier sur https://eventsphere.samirelalami.space
+```
+
+---
+
+### 📊 Monitoring et Analytics (optionnel)
+
+Pour suivre le trafic sur votre site :
+
+**Google Analytics :**
+```bash
+npm install react-ga4
+```
