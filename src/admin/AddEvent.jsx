@@ -70,7 +70,7 @@ const AddEvent = () => {
         date: '',
       });
     } catch (error) {
-      console.error('Erreur:', error);
+      console.error('Erreur:', error.response ? error.response.data : error.message);
       setMessage('❌ Erreur lors de l\'ajout de l\'événement');
     } finally {
       setLoading(false);

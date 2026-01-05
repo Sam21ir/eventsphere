@@ -17,6 +17,15 @@
       "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767316330/eventsphere/koyoiojgi21luyaxsq7q.jpg",
       "price": 445.02,
       "date": "2026-01-01"
+    },
+    {
+      "id": "24d1",
+      "title": "test 2",
+      "description": "ttttt",
+      "category": "Théâtre",
+      "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767461620/eventsphere/kkqb0szwb5mjysigusca.png",
+      "price": 900,
+      "date": "2027-01-01"
     }
   ],
   "orders": [
@@ -73,6 +82,49 @@
       "total": 123,
       "status": "En attente",
       "createdAt": "2025-12-31T19:56:48.485Z"
+    },
+    {
+      "id": "7e42",
+      "customerName": "SAMIR EL ALAMI",
+      "customerEmail": "elalamicentsept@gmail.com",
+      "customerPhone": "0630002010",
+      "items": [
+        {
+          "id": "1d8b",
+          "title": "cka",
+          "price": 445.02,
+          "quantity": 1,
+          "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767316330/eventsphere/koyoiojgi21luyaxsq7q.jpg"
+        },
+        {
+          "id": "a2fd",
+          "title": "a",
+          "price": 123,
+          "quantity": 1,
+          "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767097901/eventsphere/nxem7fxhi2osbqaderud.jpg"
+        }
+      ],
+      "total": 568.02,
+      "status": "En attente",
+      "createdAt": "2026-01-03T17:29:53.368Z"
+    },
+    {
+      "id": "6979",
+      "customerName": "SAMIR EL ALAMI",
+      "customerEmail": "elalamicentsept@gmail.com",
+      "customerPhone": "0630002010",
+      "items": [
+        {
+          "id": "1d8b",
+          "title": "cka",
+          "price": 445.02,
+          "quantity": 1,
+          "image": "https://res.cloudinary.com/dednx11pe/image/upload/v1767316330/eventsphere/koyoiojgi21luyaxsq7q.jpg"
+        }
+      ],
+      "total": 445.02,
+      "status": "En attente",
+      "createdAt": "2026-01-03T17:31:05.503Z"
     }
   ]
 }
